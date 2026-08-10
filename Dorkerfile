@@ -20,10 +20,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the application source
 COPY solver.py service.py clientsend.py ./
 
-# Set environment variables (REMOVED PORT)
+# Set environment variables (NO PORT here - Railway provides it)
 ENV MAX_WORKERS=4
 
-# Railway will provide the PORT automatically
+# Expose port for Railway
 EXPOSE 8191
 
+# Start the service
 CMD ["python", "service.py"]
