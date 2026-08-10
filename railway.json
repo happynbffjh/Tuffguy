@@ -7,6 +7,6 @@
     "numReplicas": 1,
     "restartPolicyType": "ON_FAILURE",
     "healthcheckPath": "/health",
-    "startCommand": "python service.py"
+    "startCommand": "bash setup.sh"
   }
 }
